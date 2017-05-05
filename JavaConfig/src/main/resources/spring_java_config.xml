@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="rjx"/><!--为什么注释了这一句话也是可以的？,此处无组件扫描-->
+    <!--开启组件扫描，也可以在 config类之中通过@ComponentScan(basePackages = {"rjx"})来开启-->
+</beans>
