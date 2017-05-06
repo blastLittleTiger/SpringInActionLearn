@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <context:component-scan base-package="com.rjx"/>
+
+    <!-- 获取数据源 -->
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <!-- mysql数据库的驱动 -->
+        <property name="driverClassName"
+                  value="com.mysql.jdbc.Driver">
+        </property>
+        <!-- 数据库的地址-->
+        <property name="url"
+                  value="jdbc:mysql://localhost:3306/little_duck">
+        </property>
+        <!-- 数据库用户名 -->
+        <property name="username" value="root"></property>
+        <!-- 数据库密码-->
+        <property name="password" value=""></property>
+    </bean>
+    <!-- jdbc的模板类-->
+    <bean id="jdbcTemplate"
+          class="org.springframework.jdbc.core.JdbcTemplate" abstract="false"
+          lazy-init="false">
+        <!-- 给模板的变量dataSource赋值，指向第一个bean的id-->
+        <property name="dataSource">
+            <ref bean="dataSource"/>
+        </property>
+    </bean>
+    <!-- 我们自己定义的一个类，如果我们还没有yellowDuckDao这个类，请暂时不要下面的配置，
+    后面写完yellowDuckDao这个类再补上去-->
+    <bean id="yellowDuckDao" class="com.rjx.dao.YellowDuckDaoImpl">
+        <property name="jdbcTemplate">
+            <ref bean="jdbcTemplate"/>
+        </property>
+    </bean>
+
+</beans>
