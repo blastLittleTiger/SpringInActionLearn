@@ -1,0 +1,1 @@
+xml配置以xml配置为特征，其中需要用到web.xml的配置，以及Spring的beans, bean的配置。

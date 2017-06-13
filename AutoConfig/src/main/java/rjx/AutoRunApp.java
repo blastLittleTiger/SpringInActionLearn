@@ -6,7 +6,7 @@ import rjx.config.AppConfiguration;
 import rjx.model.People;
 import rjx.service.PeopleService;
 
-public class App
+public class AutoRunApp
 {
     public static void main(String args[])
     {

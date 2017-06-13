@@ -1,0 +1,1 @@
+auto配置，以component, componentscan, autowired等为特征。

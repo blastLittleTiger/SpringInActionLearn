@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import rjx.model.Car;
 
 
-public class AppXML
+public class XMLRunApp
 {
     /*spring_beans.xml文件应该放在何处呢？是如何扫描到的呢？*/
     public static void main(String[] args)

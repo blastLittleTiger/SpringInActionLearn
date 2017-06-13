@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple AppXML.
+ * Unit test for simple XMLRunApp.
  */
 public class AppTest 
     extends TestCase

@@ -9,7 +9,7 @@ import rjx.service.BookInfoService;
 /**
  * Hello world!
  */
-public class AppJava
+public class JavaRunApp
 {
     public static void main(String[] args)
     {
