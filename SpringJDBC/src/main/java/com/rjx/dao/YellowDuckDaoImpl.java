@@ -34,6 +34,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /*XML时无需Repository后的yellowDuckDao*/
+//XML配置时候，直接不需要此处的注解，因为在xml配置文件中已经配置好了，其实在这个时候，完全可以纯粹xml方式,来完成配置。
 @Repository("yellowDuckDao")
 public class YellowDuckDaoImpl implements YellowDuckDao
 {
