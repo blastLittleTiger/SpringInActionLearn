@@ -54,6 +54,7 @@ public class YellowDuckDaoImpl implements YellowDuckDao
     /*XML时候需要启用如下代码*/
     private JdbcTemplate jdbcTemplate;
 
+    //将数据源装填，就可以了。
     public JdbcTemplate getJdbcTemplate()
     {
         return jdbcTemplate;
@@ -66,17 +67,15 @@ public class YellowDuckDaoImpl implements YellowDuckDao
 
 
     /*自动装配或者JavaConfig装配时候使用*/
-    /*@Autowired
-    private JdbcTemplate jdbcTemplate;
+    /*private JdbcTemplate jdbcTemplate;
+    private DataSource dataSource;
 
-    public JdbcTemplate getJdbcTemplate()
+    //将数据源装填，才能成功
+    @Autowired
+    public void setDataSource(DataSource dataSource)
     {
-        return jdbcTemplate;
-    }
-
-    public void setJdbcTemplate(JdbcTemplate jdbcTemplate)
-    {
-        this.jdbcTemplate = jdbcTemplate;
+        this.dataSource = dataSource;
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
     */

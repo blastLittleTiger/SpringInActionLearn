@@ -9,11 +9,10 @@
     <module>JavaConfig</module>
     <module>XMLConfig</module>
     <module>AutoConfig</module>
-    <module>JavaConfig</module>
   </modules>
   <packaging>pom</packaging>
 
-  <name>mutilmodule</name>
+  <name>SpringInActionLearn</name>
   <url>http://maven.apache.org</url>
 
   <properties>
